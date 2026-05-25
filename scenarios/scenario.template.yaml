@@ -11,8 +11,13 @@ inputs:
   purpose: ""
   technical_description: ""
   specifications: []
+  browser_automation:
+    tool: ""
+    required: false
+  secret_sources: []
 deliverables:
   - run-report
 approval_policy:
   unlock_design_time_locks: ask
   modify_tenant_state: ask
+  create_cloud_accounts: ask

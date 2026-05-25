@@ -1,0 +1,39 @@
+id: sample-btp-admin-scenario
+scenario_type: btp-admin
+execution_mode: plan
+description: >
+  Prepare a SAP BTP trial landscape for Integration Suite work by creating or
+  locating a trial account, creating a subaccount, enabling required services,
+  and capturing service key endpoints for downstream automation.
+source_tenant: {}
+target_tenant:
+  landscape: sap-btp-trial
+  subaccount_name: codex-subaccount
+  region: ""
+packages: []
+artifacts: []
+inputs:
+  purpose: bootstrap BTP trial account for SAP Integration Suite work
+  technical_description: >
+    Use browser automation only when required, keep secrets out of Git, and
+    capture reusable handoff notes for unstable UI or provisioning behavior.
+  specifications:
+    - knowledge/btp/trial-account-playbook.md
+    - skills/btp-admin/CHECKLIST.md
+  browser_automation:
+    tool: playwright
+    required: true
+  secret_sources:
+    - local approved credential file
+  required_outputs:
+    - subaccount details
+    - service key details
+    - tenant management endpoint
+    - API endpoint
+deliverables:
+  - run-report
+  - handoff-notes
+approval_policy:
+  unlock_design_time_locks: ask
+  modify_tenant_state: ask
+  create_cloud_accounts: ask

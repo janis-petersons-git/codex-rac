@@ -38,6 +38,28 @@ The goal is to make reusable consultant know-how versioned, reviewable, and impr
 3. Build the orchestrator intake and routing logic.
 4. Add one end-to-end worker flow for CPI development.
 
+## Current worker coverage
+
+- `btp-admin`
+  Trial-account and subaccount setup guidance, browser-driven BTP admin steps, and service-key endpoint capture.
+- `cpi-development`
+  CPI implementation and packaging guidance.
+- `cpi-migration`
+  CPI migration workflow guidance.
+- `documentation`
+  Documentation generation guidance.
+- `unit-test`
+  Validation and regression-test guidance.
+
+## Knowledge capture rule
+
+If an agent has to spend extra effort to understand or unblock something, it should convert that lesson into modular handoff assets such as:
+
+- a skill README or checklist
+- a focused knowledge note
+- a scenario example
+- a schema or contract refinement
+
 ## Git
 
 Git is initialized locally in this workspace, but no remote is configured yet.

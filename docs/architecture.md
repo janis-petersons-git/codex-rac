@@ -70,3 +70,4 @@ Primary contract files:
 3. Prefer deterministic inputs and outputs over clever prompting.
 4. Capture lessons learned in modular files, not long handoff prompts.
 5. Add tests around skills and schemas as soon as patterns stabilize.
+6. If an agent spends extra effort resolving an unclear step, it must convert that learning into reusable handoff assets such as skills, knowledge files, examples, or checklists.

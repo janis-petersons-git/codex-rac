@@ -51,4 +51,7 @@ properties:
   approval_policy:
     type: object
     additionalProperties: true
+  browser_automation:
+    type: object
+    additionalProperties: true
 additionalProperties: false
