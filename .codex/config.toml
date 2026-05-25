@@ -1,0 +1,15 @@
+# Work-only VS Code Codex config.
+# Open this folder in VS Code to use the Azure-backed work setup without
+# changing the personal global Codex configuration.
+
+model = "FFD_gpt-5.4"
+model_provider = "work_azure"
+model_reasoning_effort = "none"
+model_catalog_json = "C:\\Users\\janis.petersons\\Desktop\\Codex\\Codex_Work_Azure_ModelCatalog_FullOnly.json"
+
+[model_providers.work_azure]
+name = "Work Azure"
+base_url = "https://samue-mo8d2goz-northcentralus.services.ai.azure.com/api/projects/samue-mo8d2goz-northcentralus_project/openai/v1"
+wire_api = "responses"
+env_key = "AZURE_OPENAI_API_KEY"
+env_key_instructions = "Set AZURE_OPENAI_API_KEY in your environment before starting the IDE"

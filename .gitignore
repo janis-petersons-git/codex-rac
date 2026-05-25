@@ -1,0 +1,22 @@
+.DS_Store
+Thumbs.db
+
+# Local secrets and environment-specific inputs
+.env
+.env.*
+secrets/
+credentials/
+*.local.yaml
+*.local.yml
+*.local.json
+
+# Generated outputs
+dist/
+build/
+tmp/
+runs/
+artifacts/
+
+# Python / Node common noise
+__pycache__/
+node_modules/

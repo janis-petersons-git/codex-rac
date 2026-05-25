@@ -1,0 +1,18 @@
+id: example-scenario
+scenario_type: development
+execution_mode: plan
+description: >
+  Replace this with the business and technical objective.
+source_tenant: {}
+target_tenant: {}
+packages: []
+artifacts: []
+inputs:
+  purpose: ""
+  technical_description: ""
+  specifications: []
+deliverables:
+  - run-report
+approval_policy:
+  unlock_design_time_locks: ask
+  modify_tenant_state: ask

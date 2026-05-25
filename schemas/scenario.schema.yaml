@@ -1,0 +1,54 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+title: SAP CI Scenario
+type: object
+required:
+  - id
+  - scenario_type
+  - execution_mode
+  - deliverables
+properties:
+  id:
+    type: string
+  scenario_type:
+    type: string
+    enum:
+      - btp-admin
+      - migration
+      - development
+      - sanity-test
+      - unit-test
+      - documentation
+  execution_mode:
+    type: string
+    enum:
+      - plan
+      - draft
+      - apply
+      - validate
+  description:
+    type: string
+  source_tenant:
+    type: object
+    additionalProperties: true
+  target_tenant:
+    type: object
+    additionalProperties: true
+  packages:
+    type: array
+    items:
+      type: string
+  artifacts:
+    type: array
+    items:
+      type: string
+  inputs:
+    type: object
+    additionalProperties: true
+  deliverables:
+    type: array
+    items:
+      type: string
+  approval_policy:
+    type: object
+    additionalProperties: true
+additionalProperties: false

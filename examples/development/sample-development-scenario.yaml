@@ -1,0 +1,26 @@
+id: sample-order-api
+scenario_type: development
+execution_mode: plan
+description: >
+  Build a CPI integration for an order-related API using structured requirements,
+  externally configurable connectivity settings, and a documentation package.
+packages:
+  - PKG_SAMPLE_ORDER
+artifacts:
+  - IF_Sample_Order
+inputs:
+  purpose: Expose a normalized order interface to a downstream system.
+  technical_description: >
+    Receive request, normalize inbound model, map to provider contract,
+    call backend, map provider response back to consumer contract.
+  specifications:
+    - specs/openapi.yaml
+    - specs/mapping-workbook.xlsx
+deliverables:
+  - cpi-artifacts
+  - deployable-zip
+  - sanity-test-report
+  - documentation-outline
+approval_policy:
+  unlock_design_time_locks: ask
+  modify_tenant_state: ask
