@@ -1,0 +1,45 @@
+id: codex-subaccount-apply
+scenario_type: btp-admin
+execution_mode: apply
+description: >
+  Create or locate a SAP BTP trial account, create the subaccount
+  `codex-subaccount`, enable the services needed for Integration Suite and API
+  access, and capture service-key endpoint details for downstream CPI work.
+source_tenant: {}
+target_tenant:
+  landscape: sap-btp-trial
+  subaccount_name: codex-subaccount
+  region: ""
+packages: []
+artifacts: []
+inputs:
+  purpose: prepare BTP trial prerequisites for CPI and Integration Suite work
+  technical_description: >
+    Use prior RS Playwright knowledge for navigation and troubleshooting, but
+    re-establish browser state during execution. Keep credentials and service
+    keys outside Git-tracked files.
+  specifications:
+    - knowledge/btp/trial-account-playbook.md
+    - knowledge/btp/known-findings.md
+    - skills/btp-admin/CHECKLIST.md
+    - skills/btp-admin/EXECUTION_PLAN.md
+    - skills/btp-admin/HANDOFF_TEMPLATE.md
+  browser_automation:
+    tool: playwright
+    required: true
+  secret_sources:
+    - C:\Users\janis.petersons\Desktop\Codex\Suser.txt
+  required_outputs:
+    - trial account status
+    - codex-subaccount status
+    - Integration Suite capability status
+    - service key metadata
+    - tenant management endpoint
+    - API endpoint
+deliverables:
+  - run-report
+  - handoff-notes
+approval_policy:
+  unlock_design_time_locks: ask
+  modify_tenant_state: ask
+  create_cloud_accounts: ask

@@ -60,6 +60,18 @@ If an agent has to spend extra effort to understand or unblock something, it sho
 - a scenario example
 - a schema or contract refinement
 
+## Current BTP coverage
+
+The repository now includes:
+
+- a `btp-admin` worker README and system prompt
+- a BTP trial playbook
+- a reusable execution checklist
+- a handoff template for secrets, endpoints, and blockers
+- sample BTP scenarios for planning and apply-mode execution
+
+The live SAP login and cloud-resource creation boundary is intentionally documented rather than hidden. Reusable setup knowledge should continue to move into modular assets as the workflow matures.
+
 ## Git
 
 Git is initialized locally in this workspace, but no remote is configured yet.
