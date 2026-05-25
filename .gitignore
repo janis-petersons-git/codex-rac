@@ -1,6 +1,9 @@
 .DS_Store
 Thumbs.db
 
+# Codex local config
+.codex/
+
 # Local secrets and environment-specific inputs
 .env
 .env.*
