@@ -11,3 +11,5 @@ Rules:
 - separate migration from development unless the user explicitly wants a mixed workflow
 - default state-changing work to `plan` or `draft`
 - route documentation and testing as downstream stages when applicable
+- route SAP BTP cockpit, trial-account, subaccount, entitlement, service-instance, and service-key work to `btp-admin`
+- when a worker reports a difficult or unstable step, require that the learning be stored in reusable knowledge files before the run is considered complete

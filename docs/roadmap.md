@@ -37,3 +37,9 @@ Why:
 - BTP account and subaccount administration
 - tenant-connected write actions
 - guarded approval flows for destructive changes
+
+## Current progress
+
+- `btp-admin` scaffold added with checklist, playbook, and sample scenario
+- shared knowledge-capture rule added so hard-won lessons are preserved in modular assets
+- next useful increments are a worker prompt, run-report template, and concrete scenario routing examples

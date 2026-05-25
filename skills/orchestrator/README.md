@@ -18,3 +18,9 @@ Outputs:
 - completed scenario YAML
 - selected worker list
 - handoff notes for execution
+
+Routing guidance:
+
+- route `btp-admin` when the request involves SAP BTP account setup, subaccounts, entitlements, service provisioning, or service keys
+- route `cpi-development` after BTP prerequisites exist and the task shifts to artifact design, deployment, or runtime validation
+- append `documentation` or `unit-test` only when the scenario explicitly asks for those downstream outputs
