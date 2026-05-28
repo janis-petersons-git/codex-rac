@@ -14,3 +14,9 @@ Potential early additions:
 - `tools/documentation/generate-documentation-from-template.example.ps1` - example template-driven DOCX generator imported from RS
 - `tools/documentation/patch-parameter-tables.example.ps1` - example parameter-table patcher showing the `parameters.propdef` extraction pattern
 - `tools/documentation/insert-screenshots.example.ps1` - example screenshot insertion helper for generated documentation
+
+## Playwright helpers
+
+- `tools/playwright/capture-iflow-screenshots.example.js` - example Integration Suite screenshot capture script using canvas zoom and selective panning
+- `tools/playwright/crop-iflow-screenshots.example.js` - example crop pipeline for post-processing raw iFlow screenshots
+- `tools/playwright/inspect-iflow-ui.example.js` - example UI-inspection script for identifying visible designer controls and layout structure

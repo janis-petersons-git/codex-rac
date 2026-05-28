@@ -10,5 +10,6 @@ Use this file as a lightweight continuity note for interrupted sessions.
 - Converted the RS start prompts into repo-native session-launch files under `knowledge/cpi/` and `knowledge/documentation/`.
 - Added example development and documentation scenarios plus richer schema/template fields to support repo-native job intake.
 - Imported reusable documentation helper scripts from RS into `tools/documentation/` as example/reference assets.
+- Imported reusable Playwright screenshot/cropping helpers from RS into `tools/playwright/` as example/reference assets.
 - Next import step: review whether any CPI-side helper scripts or sanitized example artifacts from RS should also be normalized into repo tools/examples.
-- Last pushed commit before this step: `796be26`.
+- Last pushed commit before this step: `0b2c130`.
