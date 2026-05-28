@@ -24,3 +24,7 @@ Routing guidance:
 - route `btp-admin` when the request involves SAP BTP account setup, subaccounts, entitlements, service provisioning, or service keys
 - route `cpi-development` after BTP prerequisites exist and the task shifts to artifact design, deployment, or runtime validation
 - append `documentation` or `unit-test` only when the scenario explicitly asks for those downstream outputs
+
+Bootstrap rule:
+
+- before routing a task, load the shared repo knowledge from `docs/session-bootstrap.md` and the worker knowledge files referenced there

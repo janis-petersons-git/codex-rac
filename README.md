@@ -31,6 +31,19 @@ The goal is to make reusable consultant know-how versioned, reviewable, and impr
 4. Capture outputs and decisions in a run report.
 5. Update modular knowledge files when new reusable lessons are confirmed.
 
+## Shared knowledge base
+
+The old RS workspace has now been partially normalized into this repository.
+
+Key shared entry points:
+
+- `docs/session-bootstrap.md`
+- `knowledge/cpi/agent-operation.md`
+- `knowledge/documentation/agent-operation.md`
+- `knowledge/btp/trial-account-playbook.md`
+
+The intent is that future contributors can clone this repo and work from the repo-native knowledge base instead of depending on the original RS folder layout.
+
 ## Immediate next implementation targets
 
 1. Expand the scenario schema into separate migration and development contracts.
