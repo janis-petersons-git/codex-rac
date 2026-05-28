@@ -47,6 +47,12 @@ This file consolidates the reusable operating guidance extracted from the RS doc
 - Confirm placeholder text that should remain visible is intentionally highlighted.
 - Confirm the final document contains no stale customer or project references unless explicitly required.
 
+## Repo helper scripts
+
+- The repo now carries example documentation helper scripts under `tools/documentation/` imported from the RS workspace.
+- Treat these as reference implementations for template-driven DOCX generation, parameter-table patching, and screenshot insertion.
+- Reuse or adapt them when they save time, but keep customer-specific paths and assumptions out of the shared versions.
+
 ## Knowledge maintenance
 
 - If documentation generation reveals reusable Word, screenshot, cropping, or validation lessons, add them back into the repo knowledge files before finishing.
