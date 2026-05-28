@@ -5,6 +5,8 @@ required:
   - id
   - scenario_type
   - execution_mode
+  - description
+  - inputs
   - deliverables
 properties:
   id:
@@ -44,14 +46,42 @@ properties:
   inputs:
     type: object
     additionalProperties: true
+    properties:
+      purpose:
+        type: string
+      technical_description:
+        type: string
+      specifications:
+        type: array
+        items:
+          type: string
+      secret_sources:
+        type: array
+        items:
+          type: string
+      browser_automation:
+        type: object
+        additionalProperties: true
+      tenant_access:
+        type: object
+        additionalProperties: true
+      job_config:
+        type: object
+        additionalProperties: true
+      process_groups:
+        type: array
+        items:
+          type: object
+          additionalProperties: true
+      required_outputs:
+        type: array
+        items:
+          type: string
   deliverables:
     type: array
     items:
       type: string
   approval_policy:
-    type: object
-    additionalProperties: true
-  browser_automation:
     type: object
     additionalProperties: true
 additionalProperties: false

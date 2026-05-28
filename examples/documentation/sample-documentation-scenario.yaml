@@ -1,0 +1,54 @@
+id: sample-documentation
+scenario_type: documentation
+execution_mode: draft
+description: >
+  Generate SAP Integration Suite documentation from a template document and a set of unpacked
+  or zipped integration artifacts.
+source_tenant: {}
+target_tenant: {}
+packages: []
+artifacts: []
+inputs:
+  purpose: Produce implementation documentation that follows the provided template.
+  technical_description: >
+    Use the sample document as the formatting source of truth, include only externally
+    configurable parameters, and validate the final rendered DOCX.
+  specifications:
+    - knowledge/documentation/agent-operation.md
+    - knowledge/documentation/session-start-prompt.md
+    - knowledge/documentation/generation-principles.md
+    - knowledge/documentation/screenshot-playbook.md
+  secret_sources: []
+  browser_automation:
+    tool: playwright
+    required: false
+  process_groups:
+    - title: Example Business Process
+      intro_paragraph: Replace with the business-process introduction.
+      flows:
+        - artifact_zip_path: C:/path/to/iflow.zip
+          display_name: IF Example Integration
+          role: main
+          endpoint_key: ExampleEndpoint
+          description_hint: Replace with documentation hint.
+  job_config:
+    customer_name: Example Customer
+    landscape_title: Example Landscape
+    template_document_path: C:/path/to/template.docx
+    output_document_path: C:/path/to/output.docx
+    preferred_section_order: Example order
+    document_information_rules:
+      references: blankUnlessActuallyReferenced
+      acronyms: onlyUsedInText
+      authentication_information: includeCredentialAliasesWhenUsed
+  required_outputs:
+    - final docx
+    - validation summary
+    - screenshot evidence when requested
+deliverables:
+  - documentation-docx
+  - validation-summary
+approval_policy:
+  unlock_design_time_locks: n/a
+  modify_tenant_state: n/a
+  create_cloud_accounts: n/a

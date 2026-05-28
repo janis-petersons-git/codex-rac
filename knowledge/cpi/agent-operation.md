@@ -7,6 +7,7 @@ This file consolidates the reusable operating guidance extracted from the RS CPI
 - Do not stop at file generation when tenant access exists.
 - Continue through packaging, deployment, runtime validation, and iteration on tenant feedback until the work is proven or a concrete blocker remains.
 - Prefer deterministic tenant validation over assumptions based on local inspection.
+- Load the scenario-specific XML or structured scenario contract before implementation so repo knowledge is combined with task-specific inputs.
 
 ## Preferred implementation order
 
@@ -45,3 +46,4 @@ This file consolidates the reusable operating guidance extracted from the RS CPI
 ## Knowledge maintenance
 
 - If a CPI task reveals reusable deployment, mapping, adapter, runtime, or screenshot knowledge, convert that into modular repo assets before finishing.
+- When importing or continuing older workspace knowledge, normalize it into repo-native files instead of depending on personal prompts outside Git.

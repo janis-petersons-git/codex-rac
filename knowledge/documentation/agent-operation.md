@@ -7,6 +7,7 @@ This file consolidates the reusable operating guidance extracted from the RS doc
 - Use the sample `.docx` template as the formatting source of truth.
 - Prefer editing a template-driven document structure over recreating formatting from scratch.
 - Validate the final `.docx` as a rendered Word document, not only by inspecting generated XML.
+- Load the documentation job config or structured scenario input before generating output so repo knowledge is applied to the actual document scope.
 
 ## Screenshot rules
 
@@ -49,3 +50,4 @@ This file consolidates the reusable operating guidance extracted from the RS doc
 ## Knowledge maintenance
 
 - If documentation generation reveals reusable Word, screenshot, cropping, or validation lessons, add them back into the repo knowledge files before finishing.
+- Normalize useful legacy prompt content into repo-native guides so future sessions can start from Git alone.

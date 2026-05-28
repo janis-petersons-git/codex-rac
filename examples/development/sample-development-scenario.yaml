@@ -1,26 +1,79 @@
-id: sample-order-api
+id: sample-cpi-development
 scenario_type: development
-execution_mode: plan
+execution_mode: draft
 description: >
-  Build a CPI integration for an order-related API using structured requirements,
-  externally configurable connectivity settings, and a documentation package.
+  Build, package, deploy, and validate a CPI integration scenario using the repo-native contract
+  instead of the older RS XML job config.
+source_tenant: {}
+target_tenant:
+  landscape: sap-integration-suite
+  package_display_name: Example Package
+  package_technical_id: ""
 packages:
-  - PKG_SAMPLE_ORDER
+  - Example Package
 artifacts:
-  - IF_Sample_Order
+  - IF_Example_Integration
 inputs:
-  purpose: Expose a normalized order interface to a downstream system.
+  purpose: Implement an SAP Cloud Integration scenario end to end.
   technical_description: >
-    Receive request, normalize inbound model, map to provider contract,
-    call backend, map provider response back to consumer contract.
+    Prefer standard CPI artifacts before scripts, use graphical mappings where appropriate,
+    and continue through tenant validation when access exists.
   specifications:
-    - specs/openapi.yaml
-    - specs/mapping-workbook.xlsx
+    - knowledge/cpi/agent-operation.md
+    - knowledge/cpi/session-start-prompt.md
+    - knowledge/cpi/development-principles.md
+    - knowledge/cpi/tenant-api-notes.md
+  secret_sources:
+    - approved local service-key file
+  browser_automation:
+    tool: playwright
+    required: false
+  tenant_access:
+    design_time:
+      enabled: true
+      base_url: https://example-it-api
+      token_url: https://example-it-auth/oauth/token
+      auth_method: oauth2_client_credentials
+      service_key_source: local secure file
+    runtime:
+      enabled: true
+      base_url: https://example-runtime
+      auth_method: oauth2_client_credentials
+      service_key_source: local secure file
+  job_config:
+    inbound_request_model: body
+    target_package:
+      create_if_missing: true
+      display_name: Example Package
+      technical_id: ""
+      description: Example package created from repo-native scenario contract
+    inputs:
+      consumer_api:
+        path: C:/path/to/openapi.yaml
+        type: openapi
+      provider_wsdl:
+        path: C:/path/to/provider.wsdl
+        type: wsdl
+      mapping_workbook:
+        path: C:/path/to/mapping.xlsx
+        type: xlsx
+    objects_to_create:
+      integration_flows:
+        - artifact_id: IF_Example_Integration
+          display_name: IF Example Integration
+          deploy: true
+      value_mappings: []
+      script_collections: []
+      security_materials: []
+  required_outputs:
+    - package zip
+    - deployable artifact set
+    - deployment status
+    - runtime test evidence
 deliverables:
-  - cpi-artifacts
-  - deployable-zip
-  - sanity-test-report
-  - documentation-outline
+  - run-report
+  - deployment-summary
 approval_policy:
   unlock_design_time_locks: ask
   modify_tenant_state: ask
+  create_cloud_accounts: n/a

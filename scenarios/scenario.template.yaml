@@ -11,10 +11,24 @@ inputs:
   purpose: ""
   technical_description: ""
   specifications: []
+  secret_sources: []
   browser_automation:
     tool: ""
     required: false
-  secret_sources: []
+  tenant_access:
+    design_time:
+      enabled: false
+      base_url: ""
+      token_url: ""
+      auth_method: ""
+      service_key_source: ""
+    runtime:
+      enabled: false
+      base_url: ""
+      auth_method: ""
+      service_key_source: ""
+  job_config: {}
+  required_outputs: []
 deliverables:
   - run-report
 approval_policy:
