@@ -8,8 +8,12 @@ description: >
 source_tenant: {}
 target_tenant:
   landscape: sap-btp-trial
-  subaccount_name: codex-subaccount
+  subaccount_name: Codex-demo-project
   region: ""
+  cloud_foundry:
+    required: true
+    org_name: codex-demo-project
+    space_name: dev
 packages: []
 artifacts: []
 inputs:
@@ -29,9 +33,19 @@ inputs:
     required: true
   secret_sources:
     - C:\Users\janis.petersons\Desktop\Codex\Suser.txt
+  account_bootstrap:
+    allow_trial_account_creation: true
+    reuse_existing_subaccount_if_name_matches: false
+  integration_suite:
+    required_capabilities:
+      - Cloud Integration
+    create_runtime_instances:
+      - api
+      - integration-flow
   required_outputs:
     - trial account status
     - codex-subaccount status
+    - cloud foundry status
     - Integration Suite capability status
     - service key metadata
     - tenant management endpoint

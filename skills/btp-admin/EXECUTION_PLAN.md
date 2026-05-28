@@ -13,6 +13,7 @@ This file defines the expected execution phases for the `btp-admin` worker.
 
 - determine whether the SAP BTP trial account already exists
 - determine whether the target subaccount already exists
+- determine whether Cloud Foundry is enabled and whether a space already exists
 - determine whether Integration Suite is already provisioned
 - record any known tenant identifiers, regions, or prior artifacts
 
@@ -21,12 +22,18 @@ This file defines the expected execution phases for the `btp-admin` worker.
 - navigate through the approved browser path or cockpit entry point
 - create or locate the trial account
 - create or locate the target subaccount
+- enable Cloud Foundry if required
+- assign or verify Integration Suite entitlement or trial plan
+- create the Integration Suite subscription or instance
 - enable capabilities and services required for Integration Suite and management APIs
 - create service instances and service keys if approved
 
 ## Phase 4. Capture outputs
 
 - subaccount name and region
+- Cloud Foundry org and space
+- Integration Suite subscription or instance status
+- enabled capability list
 - service-instance names and plans
 - tenant management endpoint
 - API endpoint
