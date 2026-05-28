@@ -37,12 +37,17 @@ The old RS workspace has now been partially normalized into this repository.
 
 Key shared entry points:
 
-- `docs/session-bootstrap.md`
-- `knowledge/cpi/agent-operation.md`
-- `knowledge/documentation/agent-operation.md`
+- docs/session-bootstrap.md\r\n- docs/resume-log.md\r\n- `docs/resume-log.md`
+- knowledge/cpi/agent-operation.md\r\n- knowledge/cpi/session-start-prompt.md\r\n- `knowledge/cpi/session-start-prompt.md`
+- knowledge/documentation/agent-operation.md\r\n- knowledge/documentation/session-start-prompt.md\r\n- `knowledge/documentation/session-start-prompt.md`
 - `knowledge/btp/trial-account-playbook.md`
 
 The intent is that future contributors can clone this repo and work from the repo-native knowledge base instead of depending on the original RS folder layout.
+
+Operational convention:
+
+- commit and push meaningful knowledge-base updates regularly so work survives session drops
+- prefer repo-native guides over personal handoff prompts kept outside Git
 
 ## Immediate next implementation targets
 

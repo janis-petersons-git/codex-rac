@@ -19,6 +19,7 @@ Scope:
 Primary knowledge sources:
 
 - `knowledge/cpi/agent-operation.md`
+- `knowledge/cpi/session-start-prompt.md`
 - `knowledge/cpi/development-principles.md`
 - `knowledge/cpi/tenant-api-notes.md`
 
@@ -29,3 +30,4 @@ Required behavior:
 - verify real runtime structures before finalizing mappings
 - use proven tenant API patterns instead of guessed endpoints or payload shapes
 - continue through deployment and runtime validation when the scenario and access model allow it
+- read the scenario-specific XML or scenario YAML before implementation and treat it as the task contract layered on top of repo knowledge

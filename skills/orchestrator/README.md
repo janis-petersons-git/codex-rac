@@ -28,3 +28,4 @@ Routing guidance:
 Bootstrap rule:
 
 - before routing a task, load the shared repo knowledge from `docs/session-bootstrap.md` and the worker knowledge files referenced there
+- before finishing a substantial routed task, ensure `docs/resume-log.md` records the latest durable checkpoint if the session produced new reusable structure or partial migration progress
