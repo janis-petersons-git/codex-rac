@@ -11,5 +11,6 @@ Use this file as a lightweight continuity note for interrupted sessions.
 - Added example development and documentation scenarios plus richer schema/template fields to support repo-native job intake.
 - Imported reusable documentation helper scripts from RS into `tools/documentation/` as example/reference assets.
 - Imported reusable Playwright screenshot/cropping helpers from RS into `tools/playwright/` as example/reference assets.
-- Next import step: review whether any CPI-side helper scripts or sanitized example artifacts from RS should also be normalized into repo tools/examples.
-- Last pushed commit before this step: `0b2c130`.
+- Imported sanitized runtime and migration example fixtures from RS and linked them into the migration and unit-test skills.
+- Next import step: final verification pass on repo status and ensure all imported RS knowledge is pushed.
+- Last pushed commit before this step: `dd1854e`.
