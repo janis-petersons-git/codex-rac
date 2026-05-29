@@ -1,6 +1,6 @@
 param(
-    [string]$SourceDoc = 'C:\Users\janis.petersons\Desktop\RS\generated_docs\TOTO_SAP_CommerceCloud_S4HANA_Integration_Suite_Documentation_20260415_164330.docx',
-    [string]$OutputDir = 'C:\Users\janis.petersons\Desktop\RS\generated_docs'
+    [string]$SourceDoc = 'REPO_ROOT\generated_docs\TOTO_SAP_CommerceCloud_S4HANA_Integration_Suite_Documentation_20260415_164330.docx',
+    [string]$OutputDir = 'REPO_ROOT\generated_docs'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -153,7 +153,7 @@ function Set-CellPlainText {
     [void]$firstParagraph.AppendChild($run)
 }
 
-$root = 'C:\Users\janis.petersons\Desktop\RS'
+$root = 'REPO_ROOT'
 $flowRoots = [ordered]@{
     'Route Idocs From S4HANA To SAP Commerce Cloud' = Join-Path $root '_work\doc_flows\RouteIdocs'
     'Replicate Material From S4HANA To SAP Commerce Cloud' = Join-Path $root '_work\doc_flows\ReplicateMaterial'

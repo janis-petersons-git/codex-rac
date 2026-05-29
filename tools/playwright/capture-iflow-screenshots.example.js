@@ -104,7 +104,7 @@ async function main() {
   const baseDir = process.cwd();
   const outDir = path.resolve(baseDir, 'artifacts', 'iflow_screenshots_canvaszoom');
   const storageStatePath = path.resolve(baseDir, 'artifacts', 'ci_storage_state.json');
-  const uploadedPath = path.resolve('C:\\Users\\janis.petersons\\Desktop\\RS\\_work\\toto_uploaded_iflows.json');
+  const uploadedPath = path.resolve('examples/migration/sample-uploaded-iflows.json');
   fs.mkdirSync(outDir, { recursive: true });
 
   const uploaded = JSON.parse(fs.readFileSync(uploadedPath, 'utf8'));
@@ -123,7 +123,7 @@ async function main() {
   const results = [];
   for (const artifact of uploaded) {
     const page = await context.newPage();
-    const url = `https://243ef080trial.integrationsuite-trial.cfapps.us10-001.hana.ondemand.com/shell/design/contentpackage/TOTOsintegrationcontent/integrationflows/${encodeURIComponent(artifact.Id)}`;
+    const url = `https://<tenant-host>/shell/design/contentpackage/<package-id>/integrationflows/${encodeURIComponent(artifact.Id)}`;
     await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 120000 });
     await page.waitForLoadState('networkidle', { timeout: 120000 }).catch(() => {});
     await page.waitForTimeout(4500);

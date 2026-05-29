@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { Jimp, intToRGBA } = require('jimp');
 
-const root = 'C:\\Users\\janis.petersons\\Desktop\\RS';
+const root = 'REPO_ROOT';
 const sourceDir = path.join(root, '_work', 'playwright_ci', 'artifacts', 'iflow_screenshots_canvaszoom');
 const targetDir = path.join(root, '_work', 'playwright_ci', 'artifacts', 'iflow_screenshots_canvaszoom_cropped');
 const sourceManifestPath = path.join(sourceDir, 'manifest.json');

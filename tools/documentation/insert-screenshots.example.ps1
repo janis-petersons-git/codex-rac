@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
-$root = 'C:\Users\janis.petersons\Desktop\RS'
+$root = 'REPO_ROOT'
 $docsDir = Join-Path $root 'generated_docs'
 $manifestPath = Join-Path $root '_work\playwright_ci\artifacts\iflow_screenshots_canvaszoom_cropped\manifest.json'
 

@@ -32,7 +32,7 @@ inputs:
     tool: playwright
     required: true
   secret_sources:
-    - C:\Users\janis.petersons\Desktop\Codex\Suser.txt
+    - approved local credential file
   account_bootstrap:
     allow_trial_account_creation: true
     reuse_existing_subaccount_if_name_matches: false

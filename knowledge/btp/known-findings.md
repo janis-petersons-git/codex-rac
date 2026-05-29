@@ -6,7 +6,7 @@ This file records durable findings discovered while building the BTP administrat
 
 ### Existing RS Playwright workspace contains relevant BTP and Integration Suite artifacts
 
-- Prior work in `C:\Users\janis.petersons\Desktop\RS\_work\playwright_ci` includes Playwright scripts and artifacts for SAP trial login and Integration Suite UI inspection.
+- Prior work in repo-imported Playwright reference assets under `tools/playwright/` includes Playwright scripts and artifacts for SAP trial login and Integration Suite UI inspection.
 - Recovered artifact names indicate prior successful navigation into SAP BTP cockpit and an Integration Suite trial tenant.
 - Those artifacts are useful as operator context and for future tooling patterns, but they do not remove the need to re-establish live browser state in a new run.
 

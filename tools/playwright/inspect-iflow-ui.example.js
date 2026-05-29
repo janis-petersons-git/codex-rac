@@ -12,7 +12,7 @@ async function main() {
     deviceScaleFactor: 1,
   });
   const page = await context.newPage();
-  const url = 'https://243ef080trial.integrationsuite-trial.cfapps.us10-001.hana.ondemand.com/shell/design/contentpackage/TOTOsintegrationcontent/integrationflows/Route_Idocs_From_S4HANA_To_Hybris_Commerce.DEV';
+  const url = 'https://<tenant-host>/shell/design/contentpackage/<package-id>/integrationflows/<artifact-id>';
   await page.goto(url, { waitUntil: 'domcontentloaded', timeout: 120000 });
   await page.waitForLoadState('networkidle', { timeout: 120000 }).catch(() => {});
   await page.waitForTimeout(7000);

@@ -1,6 +1,6 @@
 $ErrorActionPreference = 'Stop'
 
-$root = 'C:\Users\janis.petersons\Desktop\RS'
+$root = 'REPO_ROOT'
 $sampleDir = Join-Path $root '_work\sample_doc_unzipped'
 $invoiceFlowRoot = Join-Path $root '_work\iflow_invoice_doc'
 $routeIdocFlowRoot = Join-Path $root '_work\doc_flows\RouteIdocs'
